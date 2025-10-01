@@ -1,0 +1,83 @@
+//출력
+console.log('안녕하세요');
+
+/*
+console은 BOM (Browser Object Model)의 일부입니다. 이 BOM은 쉽게 얘기해서 JavaScript가 브라우저와 소통하기 위한 도구들을 제공하는 것이다.
+ BOM에는 window 객체가 있습니다. window 객체는 브라우저의 최상위 객체이며,
+ 이 객체 안에 여러 가지 도구들이 포함되어 있다.
+ node.js에서는 window 객체 사용 불가능, 웹 브라우저에서 사용 가능 
+*/
+
+//변수를 선언 할 떄 변하는 값을 저장할려면 let, 변하지 않는 값을 저장할려면 const를 사용한다. 
+let age = 30;
+let name = 'Jun';
+console.log(age);
+console.log(name);
+
+//let 키워드는 변수를 정의할 때 한 번만 사용하고 저장된 값을 변경하려면 새 값을 할당하면 된다
+let x=10;
+x=20;
+console.log(x);
+
+/*
+const 키워드로 변수의 값을 지정할 때는 변수 값을 let 키워드 처럼 변경할 수 없다. 
+변경할 시 타입에러가 난다.
+*/
+
+/*
+자바스크립트 문법에는 여러줄의 코드를 하나로 묶어주는 단위인 블록({})이 존재한다.
+ 블록은 코드의 범위를 나타내며, let과 const 키워드로 만든 블록 안에서 선언된 변수는 블록 밖에서 접근할 수 없다. 
+*/
+
+//블록 밖에서 선언된 변수는 블록 안에서 접근 가능 
+let value = 10;
+{
+   console.log(value); 
+}
+
+/*
+블록 안에서 선언된 변수는 블록 밖에서 접근 불가능 에러 남 
+{
+   let value = 'hello'
+}
+console.log(value); 
+*/
+
+/*
+var 키워드는 변수를 만들 때 사용하는 오래된 방법이다. 
+var로 만든 변수는 나중에 다시 선언할 수 있고 값을 변경할 순 있지만,
+코드가 복잡해질 수 있으므로 요즘 잘 사용 안한다
+*/
+
+//var는 블록 안에서 선언되어도 밖에서 접근 가능->var는 블록 스코프를 가지지 않는다 
+{
+   var val = 'hello'
+}
+console.log(val)
+
+//중괄호는 블록을 만들 떄 사용된다 함수,조건문, 반복문 등에서 사용된다. 
+
+let num = 1234;
+let str = 'jeju';
+console.log(num + 1); // 1235 (숫자 더하기)
+console.log(str + ' island'); // 'jeju island' (문자열 연결)
+
+//타입을 확인하기 위해서는 typeof 연산자를 사용할 수 있다
+//배열과 같은 자료형은 배열이 object(객체)로 인식한다. 
+
+
+//원시타입: 단순한 데이터 값을 저장
+//숫자(number00): 숫자를 나타낸다.
+let Num= 25; // Number 타입
+//문자열(String):텍스트를 나타낸다.
+let Name = 'licat'; // String 타입
+//불리언 (Boolean): 참(true) 또는 거짓(false)을 나타낸다.
+let isStudent = true; // Boolean 타입
+//심볼 (Symbol): 고유한 식별자를 나타낸다.
+let uniqueId = Symbol('id'); // Symbol 타입
+//undefined: 변수가 값을 갖고 있지 않음을 나타낸다.
+let va; // undefined 타입 (값이 할당되지 않음)
+//null: 값이 없음을 나타sosek.
+let emptyValue = null; // null 타입 (의도적으로 값이 없음)
+
+
